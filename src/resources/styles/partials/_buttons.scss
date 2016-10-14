@@ -1,0 +1,176 @@
+.open {
+  .btn-primary.dropdown-toggle {
+    @extend .btn-primary;
+
+    &:hover {
+      @extend .btn-primary:hover;
+    }
+  }
+}
+
+.btn-outline-primary {
+  background-color: $color-terciary;
+  border-color: darken($color-terciary, 10%);
+  color: $color-white;
+
+  &:hover {
+    background-color: darken($color-terciary, 10%);
+    border-color: darken($color-terciary, 20%);
+    color: $color-white;
+  }
+
+  &.active,
+  &:active,
+  &:focus,
+  &:focus.active,
+  &:active:focus {
+    background-color: $color-primary;
+    border-color: darken($color-primary, 10%);
+    color: $color-white;
+  }
+
+  &:hover.active,
+  &:active:hover {
+    background-color: darken($color-primary, 10%);
+    border-color: darken($color-primary, 20%);
+    color: $color-white;
+  }
+}
+
+.nav-pills .nav-link {
+  @extend .btn-secondary;
+
+  &.active,
+  &:active,
+  &:focus,
+  &:focus.active,
+  &:hover.active,
+  &:active:focus,
+  &:active:hover {
+    @extend .btn-secondary:hover;
+  }
+}
+
+
+.btn-primary {
+  background-color: $color-primary;
+  border-color: darken($color-primary, 10%);
+  color: $color-white;
+
+  &:hover {
+    background-color: lighten($color-primary, 10%);
+    border-color: $color-primary;
+    color: $color-white;
+
+    &:disabled,
+    &:disabled.active,
+    &:disabled.focus {
+      background-color: darken($color-light-grey, 20%);
+      border-color: darken($color-light-grey, 40%);
+      color: $color-white;
+    }
+  }
+
+  &.active,
+  &:active,
+  &:focus,
+  &:focus.active,
+  &:hover.active,
+  &:active:focus,
+  &:active:hover {
+    background-color: darken($color-primary, 10%);
+    border-color: darken($color-primary, 20%);
+    color: $color-white;
+  }
+
+  &:disabled,
+  &:disabled.active,
+  &:disabled.focus {
+    background-color: darken($color-light-grey, 10%);
+    border-color: darken($color-light-grey, 30%);
+    color: $color-white;
+  }
+
+}
+
+.btn-secondary {
+  background-color: $color-secondary;
+  border-color: darken($color-secondary, 10%);
+  color: $color-white;
+
+  &:hover {
+    background-color: lighten($color-secondary, 10%);
+    border-color: $color-secondary;
+    color: $color-white;
+
+    &:disabled,
+    &:disabled.active,
+    &:disabled.focus {
+      background-color: darken($color-light-grey, 20%);
+      border-color: darken($color-light-grey, 40%);
+      color: $color-white;
+    }
+  }
+
+  &.active,
+  &:active,
+  &:focus,
+  &:active:focus,
+  &:active:hover {
+    background-color: darken($color-secondary, 10%);
+    border-color: darken($color-secondary, 20%);
+    color: $color-white;
+  }
+
+  &:disabled,
+  &:disabled.active,
+  &:disabled.focus {
+    background-color: darken($color-light-grey, 10%);
+    border-color: darken($color-light-grey, 30%);
+    color: $color-white;
+  }
+}
+
+.btn-terciary {
+  background-color: $color-terciary;
+  border-color: darken($color-terciary, 10%);
+  color: $color-white;
+
+  &:hover {
+    background-color: lighten($color-terciary, 10%);
+    border-color: $color-terciary;
+    color: $color-white;
+  }
+
+  &.active,
+  &:active,
+  &:focus,
+  &:active:focus,
+  &:active:hover {
+    background-color: darken($color-terciary, 10%);
+    border-color: darken($color-terciary, 20%);
+    color: $color-white;
+  }
+}
+
+.btn-white {
+  background-color: $color-white;
+  border-color: darken($color-white, 30%);
+  color: $color-black;
+
+  &:hover {
+    background-color: darken($color-white, 15%);
+    border-color: darken($color-white, 30%);
+    color: $color-black;
+  }
+
+  &.active,
+  &:active,
+  &:focus,
+  &:active:focus,
+  &:active:hover {
+    background-color: darken($color-white, 30%);
+    border-color: darken($color-white, 50%);
+    color: $color-black;
+  }
+}

@@ -1,0 +1,71 @@
+.ragdoll__widget {
+  border: 1px solid $color-dark-grey;
+  background-color: $color-white;
+  overflow: hidden !important;
+}
+
+.widget__head {
+  position: relative;
+  padding: 0 .625rem;
+  background-color: $color-dark-grey;
+  color: white;
+  height: 1.875rem;
+  line-height: 1.75rem;
+  font-size: $default-font-size;
+
+}
+
+.widget__head span {
+  display: inline-block;
+  float: left;
+}
+
+.head__title {
+  display: inline-block;
+  font-family: ProximaNovaBold,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.head__subtitle {
+  margin-left: .5rem;
+  font-weight: normal;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 0px;
+  font-family: ProximaNovaLight,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.widget__body {
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% - 1.875rem);
+}
+
+.head__toolbar img,
+.head__toolbar span {
+  padding-left: .1875rem;
+  cursor: pointer;
+}
+
+.locked .hide-when-locked {
+  display: none;
+}
+
+.unlocked .hide-when-unlocked {
+  display: none;
+}
+
+.ragdoll-toolbar__button {
+  cursor: pointer;
+}
+
+.ragdoll-toolbar__button--remove:after {
+  @extend .fa;
+  content: "\f1f8";
+}
+
+.head__toolbar-container {
+  float: right;
+}

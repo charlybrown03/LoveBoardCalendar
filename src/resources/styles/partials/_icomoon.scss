@@ -1,0 +1,43 @@
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-happy:before {
+  content: "\e9e1";
+}
+.icon-sad:before {
+  content: "\e9e5";
+}
+.icon-big_grin:before {
+  content: "\e9e9";
+}
+.icon-angry:before {
+  content: "\e9ed";
+}
+.icon-straight:before {
+  content: "\e9f7";
+}
+.icon-hipster:before {
+  content: "\e9f9";
+}
+.icon-question:before {
+  content: "\ea09";
+}
+
+.icon--big {
+  @include font-size(18px);
+}
+
+.fa-empty {
+  content: " ";
+  width: 17.33px;
+}

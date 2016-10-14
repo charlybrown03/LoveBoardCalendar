@@ -1,0 +1,4 @@
+@mixin proportional-width($elements: 1, $diff: 1px) {
+  $width: (100% / $elements);
+  width: calc(#{$width} - #{($elements * $diff)});
+}

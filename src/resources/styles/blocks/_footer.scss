@@ -1,0 +1,26 @@
+.app__footer {
+  position: fixed;
+  z-index: 1001;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2rem;
+}
+
+.footer__container {
+  background-color: $body-general-color;
+  color: $color-light-grey;
+
+  border-top: 2px solid $body-general-line-color;
+  height: 2rem;
+  width: 100%;
+
+  span,
+  a {
+    @include font-size(13px);
+    color: $color-light-grey;
+    line-height: 2rem;
+  }
+}
+
+

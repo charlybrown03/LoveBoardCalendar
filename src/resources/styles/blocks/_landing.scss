@@ -1,0 +1,29 @@
+.resume-container {
+  height: 5.125rem;
+  margin-top: 1rem;
+  @include shadow();
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: white;
+  padding: 1rem;
+  display: table;
+  width: 100%;
+
+  .add-heart__button {
+    @include shadow();
+  }
+
+  i {
+    vertical-align: middle;
+    padding-left: .5rem;
+    padding-right: .5rem;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}

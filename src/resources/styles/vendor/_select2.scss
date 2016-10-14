@@ -1,0 +1,11 @@
+.input-group .select2-selection {
+  border: 1px solid opacify($color-black, .5);
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  overflow: hidden;
+}
+
+.select2-container .select2-search__field,
+.select2-container .select2-input {
+  width: 100% !important;
+}

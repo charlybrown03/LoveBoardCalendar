@@ -1,0 +1,23 @@
+body {
+  background-color: $body-background-color;
+
+  font-family: $default-font-family;
+  line-height: $default-line-height;
+  @include font-size($default-font-size);
+}
+
+.text--red {
+  color: $color-primary;
+}
+
+.text--blue {
+  color: lighten($color-secondary, 20%);
+}
+
+.text--grey {
+  color: darken($color-terciary, 15%);
+}
+
+a:not([href]) {
+  cursor: pointer
+}

@@ -1,0 +1,3 @@
+@mixin shadow() {
+  box-shadow: .0625rem .0625rem .3125rem 0px transparentize($color-grey, 0.65);
+}
