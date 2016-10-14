@@ -1,5 +1,6 @@
 var BaseCollection = Backbone.Collection.extend({
-  baseUrl: 'http://yui-ragdoll.youbora.com',
+
+  baseUrl: 'http://carmorenovi.esy.es',
 
   endpoint: '',
 
@@ -7,8 +8,7 @@ var BaseCollection = Backbone.Collection.extend({
 
   url: function () {
     var endpoint = this.buildEndpoint()
-    this.params.token = App.Storage.User.get('token')
-    return this.baseUrl + '/' + App.Storage.User.get('systemCode') + '/' + endpoint + '?' + $.param(this.params)
+    return this.baseUrl + '/' + endpoint + '?' + $.param(this.params)
   },
 
   getPathParams: function () {

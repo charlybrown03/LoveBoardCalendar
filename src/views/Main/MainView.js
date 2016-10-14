@@ -18,7 +18,8 @@ var MainView = Marionette.View.extend({
     // this.ui.content.html('Hello World!')
   },
 
-  onClickAddHeartButton: function () {
+  onClickAddHeartButton: function (e) {
+    $(e.currentTarget).blur()
     $(this.ui.heartsContainer).append('<i class="fa fa-3x fa-heart-o"></i>')
   }
 
