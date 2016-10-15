@@ -1,28 +1,25 @@
-var HeartModel = require('../../models/HeartModel')
-
 var MainView = Marionette.View.extend({
 
   template: require('./templates/MainView.hbs'),
 
-  tagName: 'div',
   className: 'main__page',
 
-  ui: {
-    addHeartButton: '.add-heart__button',
-    heartsContainer: '.hearts-container'
+  regions: {
+    heartsResume: {
+      el: '.resume-container',
+      replaceElement: true
+    }
   },
 
-  collectionEvents: {
-    'add remove': 'render'
+  channel: 'main',
+
+  initialize: function () {
+    var radioChannel = Radio.channel(this.channel)
+    this.listenTo(radioChannel, 'render:region', this.onRenderRegion.bind(this))
   },
 
-  events: {
-    'click @ui.addHeartButton': 'onClickAddHeartButton'
-  },
-
-  onClickAddHeartButton: function (e) {
-    $(e.currentTarget).blur()
-    this.collection.add(new HeartModel())
+  onRenderRegion: function (region, view) {
+    this.showChildView(region, view)
   }
 
 })
