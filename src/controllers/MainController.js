@@ -5,7 +5,8 @@ var MainView = require('../views/Main/MainView')
 var MainController = BaseController.extend({
 
   showMain: function () {
-    var view = new MainView()
+    var collection = Radio.channel('heart').request('getAll')
+    var view = new MainView({ collection: collection })
     Radio.channel('app').trigger('render:region', 'content', view)
   }
 

@@ -1,9 +1,8 @@
 <div class="resume-container">
   <span class="hearts-container">
-    <i class="fa fa-heart-o"></i>
-    <i class="fa fa-lg fa-heart-o"></i>
-    <i class="fa fa-2x fa-heart-o"></i>
-    <i class="fa fa-3x fa-heart-o"></i>
+    {{#each items}}
+    <i class="fa fa-{{size}} fa-heart-o" style="color: {{color}}"></i>
+    {{/each}}
   </span>
   <button class="btn btn-primary pull-right add-heart__button">
     <i class="fa fa-2x fa-heart-o"></i>

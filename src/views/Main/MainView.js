@@ -1,3 +1,5 @@
+var HeartModel = require('../../models/HeartModel')
+
 var MainView = Marionette.View.extend({
 
   template: require('./templates/MainView.hbs'),
@@ -10,17 +12,17 @@ var MainView = Marionette.View.extend({
     heartsContainer: '.hearts-container'
   },
 
+  collectionEvents: {
+    'add remove': 'render'
+  },
+
   events: {
     'click @ui.addHeartButton': 'onClickAddHeartButton'
   },
 
-  onRender: function () {
-    // this.ui.content.html('Hello World!')
-  },
-
   onClickAddHeartButton: function (e) {
     $(e.currentTarget).blur()
-    $(this.ui.heartsContainer).append('<i class="fa fa-3x fa-heart-o"></i>')
+    this.collection.add(new HeartModel())
   }
 
 })
