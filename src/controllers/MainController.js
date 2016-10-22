@@ -12,6 +12,7 @@ var MainController = BaseController.extend({
 
     var heartsResumeView = new HeartsResumeView({ collection: collection })
     Radio.channel('main').trigger('render:region', 'heartsResume', heartsResumeView)
+    heartsResumeView.collection.fetch()
   }
 
 })

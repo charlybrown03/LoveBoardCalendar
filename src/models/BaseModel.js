@@ -1,8 +1,8 @@
 var BaseModel = Backbone.Model.extend({
 
-  baseUrl: 'http://yui-ragdoll.youbora.com',
+  baseUrl: 'http://localhost:8080',
 
-  endpoint: '',
+  endpoint: 'heart',
 
   params: {},
 
@@ -13,9 +13,9 @@ var BaseModel = Backbone.Model.extend({
 
   urlRoot: function () {
     var endpoint = this.buildEndpoint()
-    this.params.token = App.Storage.User.get('token')
+    // this.params.token = App.Storage.User.get('token')
 
-    return this.baseUrl + '/' + App.Storage.User.get('systemCode') + '/' + endpoint
+    return this.baseUrl + '/' + endpoint
   },
 
   getPathParams: function () {

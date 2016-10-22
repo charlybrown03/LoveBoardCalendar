@@ -8,20 +8,28 @@ var HeartsResumeView = Marionette.View.extend({
 
   ui: {
     addHeartButton: '.add-heart__button',
-    heartsContainer: '.hearts-container'
+    heartsContainer: '.hearts-container',
+    heartElement: '.heart-element'
   },
 
   collectionEvents: {
-    'add remove': 'render'
+    'sync add remove': 'render'
   },
 
   events: {
-    'click @ui.addHeartButton': 'onClickAddHeartButton'
+    'click @ui.addHeartButton': 'onClickAddHeartButton',
+    'click @ui.heartElement': 'onClickHeartElement'
   },
 
   onClickAddHeartButton: function (e) {
     $(e.currentTarget).blur()
-    this.collection.add(new HeartModel())
+    var heart = new HeartModel()
+    this.collection.add(heart)
+    heart.save()
+  },
+
+  onClickHeartElement: function (e) {
+    console.log(this.collection.get($(e.currentTarget)))
   }
 
 })
