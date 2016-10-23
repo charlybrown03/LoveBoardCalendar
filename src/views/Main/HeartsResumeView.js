@@ -34,8 +34,8 @@ var HeartsResumeView = Marionette.View.extend({
   onClickHeartElement: function (e) {
     var heart = this.collection.get($(e.currentTarget).data('id'))
     heart.set('color', 'green')
-    console.log(heart.toJSON())
-    heart.save()
+    // heart.save()
+    heart.destroy()
   }
 
 })
