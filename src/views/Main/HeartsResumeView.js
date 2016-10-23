@@ -24,12 +24,18 @@ var HeartsResumeView = Marionette.View.extend({
   onClickAddHeartButton: function (e) {
     $(e.currentTarget).blur()
     var heart = new HeartModel()
-    this.collection.add(heart)
     heart.save()
+    .then(function (response, status) {
+      heart.set('id', response.id)
+      this.collection.add(heart)
+    }.bind(this))
   },
 
   onClickHeartElement: function (e) {
-    console.log(this.collection.get($(e.currentTarget)))
+    var heart = this.collection.get($(e.currentTarget).data('id'))
+    heart.set('color', 'green')
+    console.log(heart.toJSON())
+    heart.save()
   }
 
 })

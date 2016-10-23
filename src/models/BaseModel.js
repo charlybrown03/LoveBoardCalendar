@@ -8,7 +8,8 @@ var BaseModel = Backbone.Model.extend({
 
   url: function () {
     var url = Backbone.Model.prototype.url.apply(this, arguments)
-    return url + '?' + $.param(this.params)
+    var params = (Object.keys(this.params).length) ? ('?' + $.param(this.params)) : ''
+    return url + params
   },
 
   urlRoot: function () {
