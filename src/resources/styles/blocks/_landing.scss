@@ -1,10 +1,9 @@
 .resume-container {
   height: 5.125rem;
-  margin-top: 1rem;
   @include shadow();
-  border: 1px solid black;
-  border-radius: 3px;
-  background-color: white;
+  border: 4px solid white;
+  border-radius: 1rem;
+  background-color: transparent;
   padding: 1rem;
   width: 100%;
 
@@ -19,6 +18,15 @@
 
   .add-heart__button {
     @include shadow();
+    @include dark-wood-background;
+    border: none;
+    height: 2.4em;
+    margin-right: 1rem;
+
+    i {
+      top: -0.3rem;
+      position: relative;
+    }
   }
 
   i {
