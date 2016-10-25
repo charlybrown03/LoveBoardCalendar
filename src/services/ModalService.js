@@ -10,7 +10,7 @@ var ModalService = Marionette.Object.extend({
 
   showHeartResume: function (model) {
     var view = new ResumeHeartModalView({ model: model })
-    App.rootView.triggerMehod('render:region', 'overlay', view)
+    App.rootView.triggerMethod('render:region', 'overlay', view)
   }
 
 })

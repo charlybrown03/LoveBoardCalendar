@@ -8,10 +8,10 @@
 }
 
 .footer__container {
-  background-color: $body-general-color;
+  @include wood-background;
   color: $color-light-grey;
 
-  border-top: 2px solid $body-general-line-color;
+  border-top: 1px solid $color-light-grey;
   height: 2rem;
   width: 100%;
 

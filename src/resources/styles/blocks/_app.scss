@@ -1,6 +1,23 @@
-.app__content {
-  padding: 2.5rem;
+body, html {
+  @include wood-background
   height: 100%;
   width: 100%;
+  background-size: 120px;
+  background-repeat: repeat;
+  overflow-x: hidden;
+}
+
+#app {
+  height: calc(100% - 4rem);
+}
+
+.app__content {
+  padding: 2rem;
+  min-width: calc(100% - 4rem);
+  max-width: calc(100% - 4rem);
+  margin: 2rem 2rem 0 2rem;
+  height: 100%;
+  background-color: #3a3434;
+
 
 }

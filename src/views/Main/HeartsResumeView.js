@@ -33,9 +33,11 @@ var HeartsResumeView = Marionette.View.extend({
 
   onClickHeartElement: function (e) {
     var heart = this.collection.get($(e.currentTarget).data('id'))
-    heart.set('color', 'green')
+    Radio.channel('modals').request('show:heart:resume', heart)
+
+    // heart.set('color', 'green')
     // heart.save()
-    heart.destroy()
+    // heart.destroy()
   }
 
 })

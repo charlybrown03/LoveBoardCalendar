@@ -16,6 +16,7 @@
 @import "mixins/font-size";
 @import "mixins/proportional-width";
 @import "mixins/shadow";
+@import "mixins/wood-background";
 
 /*
  * Vendors
@@ -23,10 +24,10 @@
 
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome/scss/font-awesome";
-// @import "select2/src/scss/core";
+@import "vendor/select2";
+@import "select2/src/scss/core";
 // @import "bootstrap-daterangepicker/daterangepicker.scss";
 // @import "vendor/datatables";
-// @import "vendor/select2";
 // @import "vendor/highlight-monokai";
 // @import "vendor/_checkbox-slider";
 // @import "vendor/_icon-picker";
