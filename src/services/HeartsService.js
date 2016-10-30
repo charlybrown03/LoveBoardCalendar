@@ -11,11 +11,7 @@ var HeartsService = Marionette.Object.extend({
   },
 
   getAll: function () {
-    var collection = new HeartsCollection()
-    for (var i = 0; i < 5; i++) {
-      collection.add(new HeartModel())
-    }
-    return collection
+    return new HeartsCollection()
   },
 
   getOne: function () {
