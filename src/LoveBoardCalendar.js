@@ -81,8 +81,8 @@ var LoveBoardCalendar = Marionette.Application.extend({
   },
 
   onStart: function (options) {
-    if (Backbone.history){
-      Backbone.history.start();
+    if (Backbone.history) {
+      Backbone.history.start()
     } else {
       this.navigate('')
     }

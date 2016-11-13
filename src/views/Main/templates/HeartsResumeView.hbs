@@ -1,7 +1,13 @@
+{{log this}}
 <span class="hearts-container">
-  {{#each items}}
-  <i class="fa fa-{{size}} fa-heart-o heart-element" data-id="{{id}}" style="color: {{color}}"></i>
-  {{/each}}
+  {{#if detail}}
+    <i class="fa fa-2x fa-angle-right heart-element" data-id="0" style="color: white"></i>
+    {{#each collection}}
+    <i class="fa fa-{{size}} fa-heart-o heart-element" data-id="{{id}}" style="color: {{color}}"></i>
+    {{/each}}
+  {{else}}
+    <span class="hearts-count">{{length}}</span><span><i class="fa fa-2x fa-heart-o heart-element" data-id="0" style="color: white"></i></span>
+  {{/if}}
 </span>
 <button class="btn btn-primary pull-right add-heart__button">
   <i class="fa fa-2x fa-heart-o"></i>

@@ -9,7 +9,7 @@
 
 .footer__container {
   @include wood-background;
-  color: $color-light-grey;
+  color: $color-dark-grey;
 
   border-top: 1px solid $color-light-grey;
   height: 2rem;
@@ -18,7 +18,8 @@
   span,
   a {
     @include font-size(13px);
-    color: $color-light-grey;
+    font-weight: bold;
+    color: $color-dark-grey;
     line-height: 2rem;
   }
 }
