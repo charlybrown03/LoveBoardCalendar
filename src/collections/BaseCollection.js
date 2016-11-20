@@ -1,6 +1,6 @@
 var BaseCollection = Backbone.Collection.extend({
 
-  baseUrl: 'http://localhost:8080',
+  baseUrl: 'http://charly-api.tk',
 
   endpoint: 'hearts',
 

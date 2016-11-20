@@ -1,6 +1,6 @@
 var BaseModel = Backbone.Model.extend({
 
-  baseUrl: 'http://localhost:8080',
+  baseUrl: 'http://charly-api.tk',
 
   endpoint: 'heart',
 
